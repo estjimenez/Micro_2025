@@ -1,0 +1,48 @@
+// Historias de usuario
+
+GET http://localhost:8000/api/app/historias
+
+POST http://localhost:8000/api/app/historias
+
+{
+    "titulo": "Implementar login",
+    "descripcion": "Como usuario quiero poder iniciar sesión",
+    "responsable": "Juan Perez",
+    "estado": "nueva",
+    "puntos": 5,
+    "fecha_creacion": "2025-05-31",
+    "fecha_finalizacion": null,
+    "sprint_id": 1
+}
+
+GET http://localhost:8000/api/app/historias/{id}
+
+PUT http://localhost:8000/api/app/historias/{id}
+
+DELETE http://localhost:8000/api/app/historias/{id}
+
+//Sprints
+
+GET http://localhost:8000/api/app/sprints
+
+POST http://localhost:8000/api/app/sprints
+
+{
+    "nombre": "Sprint 1",
+    "fecha_inicio": "2025-06-01",
+    "fecha_fin": "2025-06-15"
+}
+
+GET http://localhost:8000/api/app/sprints/{id}
+
+PUT http://localhost:8000/api/app/sprints/{id}
+
+DELETE http://localhost:8000/api/app/sprints/{id}
+
+//Informes
+
+GET http://localhost:8000/api/app/informes/general
+
+GET http://localhost:8000/api/app/informes/responsable
+
+

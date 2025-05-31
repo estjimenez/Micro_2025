@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestor de Historias de Usuario</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <h1>Gestor de Historias de Usuario</h1>
+
+    <h2 id="tituloFormulario">Agregar Historia</h2>
+
+    <div id="filtros">
+        <h2>Filtros de Búsqueda</h2>
+        <p>Sprint ID: <input type="text" id="filtroSprintId" /></p>
+        <p>Responsable: <input type="text" id="filtroResponsable" /></p>
+        <p>Estado:
+            <select id="filtroEstado">
+                <option value="">Todos</option>
+                <option value="nueva">Nueva</option>
+                <option value="activa">Activa</option>
+                <option value="finalizada">Finalizada</option>
+                <option value="impedimento">Impedimento</option>
+            </select>
+        </p>
+        <button id="btnAplicarFiltros">Buscar</button>
+        <button id="btnLimpiarFiltros">Limpiar Filtros</button>
+    </div>
+
+    <form id="formularioHistoria">
+        <p>Título: <input type="text" id="titulo" required /></p>
+        <p>Descripción: <textarea id="descripcion" required></textarea></p>
+        <p>Responsable: <input type="text" id="responsable" required /></p>
+        <p>Puntos: <input type="number" id="puntos" required min="1" /></p>
+        <p>Fecha de creación: <input type="date" id="fecha_creacion" required /></p>
+        <p>Fecha de finalización: <input type="date" id="fecha_finalizacion" /></p>
+        <p>Estado:
+            <select id="estado" required>
+                <option value="nueva">Nueva</option>
+                <option value="activa">Activa</option>
+                <option value="finalizada">Finalizada</option>
+                <option value="impedimento">Impedimento</option>
+            </select>
+        </p>
+        <p>Sprint ID: <input type="number" id="sprint_id" required min="1" /></p>
+        <button type="submit">Guardar Historia</button>
+        <button type="button" onclick="cancelarEdicion()">Cancelar</button>
+    </form>
+
+    <h2>Crear Sprint</h2>
+<form id="formularioSprint">
+    <p>Nombre del Sprint: <input type="text" id="nombreSprint" required /></p>
+    <p>Fecha de inicio: <input type="date" id="fechaInicioSprint" required /></p>
+    <p>Fecha de fin: <input type="date" id="fechaFinSprint" required /></p>
+    <button type="submit">Guardar Sprint</button>
+</form>
+
+    <h2>Lista de Historias</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Responsable</th>
+                <th>Estado</th>
+                <th>Puntos</th>
+                <th>Sprint</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaHistorias"></tbody>
+    </table>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
